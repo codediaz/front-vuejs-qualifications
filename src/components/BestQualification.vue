@@ -1,7 +1,7 @@
 <template>
 <div class="contanier">
   <h1>
-    Best Qualifications
+    Mejores Calificaciones
   </h1>
   
 </div>

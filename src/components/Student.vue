@@ -4,12 +4,14 @@
  
       <div class="col-md-12">
       
-        <h1>Sistema de titulación  </h1> 
+        <h1>Sistema de titulación </h1> 
 
         <div class="row">
           <input type="text" v-model="buscar" class="form-control" placeholder="Ejemplo: 0927020495"/>
-          <button type="button" class="btn btn-secondary btn-lg mt-1" function="searchStudent()">Buscar</button>   
-        </div>        
+        </div>      
+        <div class="row" style="float:right">
+           <button type="button" class="btn btn-secondary btn-lg mt-1" function="searchStudent()">Buscar</button>   
+        </div>  
                      
  
       </div>
