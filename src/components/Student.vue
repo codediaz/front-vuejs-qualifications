@@ -8,7 +8,7 @@
 
         <div class="row">
           <input type="text" v-model="buscar" class="form-control" placeholder="Ejemplo: 0927020495"/>
-          <button type="button" class="btn btn-secondary btn-lg" function="searchStudent()">Buscar</button>   
+          <button type="button" class="btn btn-secondary btn-lg mt-1" function="searchStudent()">Buscar</button>   
         </div>        
                      
  
