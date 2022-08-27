@@ -5,8 +5,12 @@
       <div class="col-md-12">
       
         <h1>Sistema de titulación  </h1> 
-        
-        <input type="text" v-model="buscar" class="form-control" placeholder="Ejemplo: 0927020495"/>              
+
+        <div class="row">
+          <input type="text" v-model="buscar" class="form-control" placeholder="Ejemplo: 0927020495"/>
+          <button type="button" class="btn btn-secondary btn-lg" function="searchStudent()">Buscar</button>   
+        </div>        
+                     
  
       </div>
  
@@ -97,15 +101,26 @@
 
 <script>
 export default{
+  data(){
+    return{
+      students:[]
+    }
+  },
 
-data(){
-  return{
-
-    student{
-      
+  methods:{
+    searchStudent(){
+      fetch('http://localhost/students/{student}')
+      .then(response=>response.json())
+      .then((dataResponse)=>{
+        console.log(dataResponse)
+        this.students=[]
+        if(typeof dataResponse[0].succes== "undefined"){
+          this.students = dataResponse
+        }
+      })
+      .catch(console.log)
     }
   }
-}
 
 }
 
